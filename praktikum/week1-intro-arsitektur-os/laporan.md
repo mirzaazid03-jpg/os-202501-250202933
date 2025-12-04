@@ -1,6 +1,6 @@
 <!-- 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu [1]
+Topik: ["Arsitektur Sistem Operasi dan Kernel"]
 
 --- -->
 
@@ -18,7 +18,7 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Dasar Teori
-Pada praktikum minggu ini, mahasiswa akan mempelajari **arsitektur dasar sistem operasi**: bagaimana komponen OS bekerja, serta bagaimana interaksi antara user, aplikasi, kernel, dan hardware terjadi.  
+ bagaimana komponen OS bekerja, serta bagaimana interaksi antara user, aplikasi, kernel, dan hardware terjadi.  
 
 Mahasiswa juga diperkenalkan pada:
 - Perbedaan mode eksekusi **kernel mode** dan **user mode**.
@@ -91,6 +91,7 @@ dmesg | head
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil][def![alt text](image.png)]
+![screenshot hasil](./Screenshot%202025-10-04%20205617.png)
 
 ---
 

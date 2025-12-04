@@ -42,10 +42,13 @@ dmesg | head
 
 ---
 
-## Hasil Eksekusi
+## Hasil Eksekusi eksperimen 1
 Sertakan screenshot hasil percobaan atau diagram:
-![screenshoot](./screenshots/linnux.png)
----
+![screenshoot](./screenshots/Screenshot%202025-11-06%20221942.png)
+![screenshoot](./screenshots/Screenshot%202025-11-06%20222233.png)
+![screenshoot](./screenshots/Screenshot%202025-11-06%20222501.png)
+## hasil eksperimen 2
+![screenshoot](./linnux.png)
 
 ## Analisis
 - Jelaskan makna hasil percobaan.  
@@ -67,13 +70,28 @@ System call adalah antarmuka (interface) antara program pengguna (user mode) den
 ---
 
 ## Quiz
-1. [apa itusistem operasi]  
-   **Jawaban:**  Sistem operasi adalah perangkat lunak utama (software) yang mengatur dan mengendalikan seluruh aktivitas di dalam komputer.
-OS berfungsi sebagai penghubung antara pengguna (user) dengan perangkat keras (hardware) agar komputer dapat digunakan dengan mudah dan efisien.
-2. [apa itu sistem call]  
-   **Jawaban:**  System call (panggilan sistem) adalah mekanisme atau jembatan yang memungkinkan program aplikasi (user) berinteraksi dengan sistem operasi (kernel).
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. [Apa fungsi utama system call dalam sistem operasi]  
+   **Jawaban:**  System call digunakan agar program tidak perlu langsung mengakses hardware atau sumber daya sistem (seperti file, memori, atau perangkat I/O) karena akses langsung bisa berbahaya dan tidak efisien.
+Sebagai gantinya, program meminta layanan kepada kernel melalui system call. Kernel kemudian akan melaksanakan permintaan tersebut dengan aman.
+2. [Sebutkan 4 kategori system call yang umum digunakan.]  
+   **Jawaban:** 1 Process Control (Pengendalian Proses)
+Digunakan untuk mengatur dan mengelola proses yang sedang berjalan di sistem.
+2. File Management (Manajemen File)
+Digunakan untuk membuka, membaca, menulis, atau menghapus file di sistem.
+3. Device Management (Manajemen Perangkat I/O)
+Digunakan untuk berinteraksi dengan perangkat keras melalui driver perangkat.
+4. Information Maintenance & Communication (Pemeliharaan Informasi dan Komunikasi)
+Berfungsi untuk mengatur komunikasi antarproses dan pertukaran data.
+3. [Mengapa system call tidak bisa dipanggil langsung oleh user program?]  
+   **Jawaban:**  System call tidak dapat dipanggil langsung oleh user program karena:
+
+Menjaga keamanan sistem dari akses ilegal.
+
+Melindungi kernel dan sumber daya sistem.
+
+Menjamin stabilitas dan isolasi proses.
+
+Memastikan semua akses ke kernel dilakukan melalui mekanisme yang terkontrol dan aman.
 
 ---
 
