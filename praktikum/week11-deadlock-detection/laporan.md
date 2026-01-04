@@ -1,71 +1,114 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu [11]
+Topik: [" Simulasi dan Deteksi Deadlock"]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : [azid mirza maulana]  
+- **NIM**   : [250202933]  
+- **Kelas** : [1ikrb]
 
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
 
+1. Membuat program sederhana untuk mendeteksi deadlock.
+2. Menjalankan simulasi deteksi deadlock dengan dataset uji.
+3. Menyajikan hasil analisis deadlock dalam bentuk tabel.
+4. Memberikan interpretasi hasil uji secara logis dan sistematis.
+5. Menyusun laporan praktikum sesuai format yang ditentukan.
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+Deadlock adalah kondisi di mana dua atau lebih proses saling menunggu resource yang tidak akan pernah dilepaskan. Deadlock dapat terjadi apabila keempat kondisi berikut terpenuhi secara bersamaan:
 
+Mutual Exclusion – Resource hanya dapat digunakan oleh satu proses pada satu waktu.
+
+Hold and Wait – Proses memegang satu resource dan menunggu resource lainnya.
+
+No Preemption – Resource tidak dapat diambil paksa dari proses yang sedang menggunakannya.
+
+Circular Wait – Terdapat siklus proses yang saling menunggu resource.
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. Menyiapkan Dataset  
+2. Implementasi Algoritma Deteksi Deadlock
+3. Eksekusi & Validasi
+4. Analisis Hasil
+5. commit push 
 
 ---
 
 ## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
-```bash
-uname -a
-lsmod | head
-dmesg | head
-```
+
 
 ---
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/example.png)
+---
+Hasil Deteksi Deadlock
+| Proses | Allocation | Request | Status   |
+| ------ | ---------- | ------- | -------- |
+| P1     | R1         | R2      | Deadlock |
+| P2     | R2         | R3      | Deadlock |
+| P3     | R3         | R1      | Deadlock |
+
+
+=== DEADLOCK DETECTION SIMULATION ===
+
+Daftar Proses dan Resource:
+P1 : Allocation = R1 , Request = R2
+P2 : Allocation = R2 , Request = R3
+P3 : Allocation = R3 , Request = R1
+
+Menganalisis kondisi sistem...
+---------------------------------
+P1 menunggu resource R2 (dipegang oleh P2)
+P2 menunggu resource R3 (dipegang oleh P3)
+P3 menunggu resource R1 (dipegang oleh P1)
+
+Siklus ketergantungan terdeteksi:
+P1 -> P2 -> P3 -> P1
+
+=== HASIL DETEKSI ===
+Status Sistem : DEADLOCK
+Proses yang terlibat deadlock:
+- P1
+- P2
+- P3
 
 ---
 
-## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+## Analisiis
+- Deadlock terjadi karena semua proses saling menunggu resource yang sedang dipegang oleh proses lain, sehingga membentuk circular wait. Tidak ada proses yang dapat melanjutkan eksekusi karena tidak ada resource yang dilepaskan.
+Kondisi ini menunjukkan bahwa keempat syarat deadlock terpenuhi secara bersamaan.
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Berdasarkan hasil praktikum, dapat disimpulkan bahwa algoritma deteksi deadlock mampu mengidentifikasi kondisi deadlock dengan menganalisis siklus ketergantungan resource. Pendekatan ini penting untuk sistem operasi yang tidak menerapkan pencegahan atau penghindaran deadlock.
 
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Apa perbedaan antara deadlock prevention, avoidance, dan detection?
+Deadlock Prevention: Mencegah salah satu kondisi deadlock agar tidak terjadi.
+Deadlock Avoidance: Menghindari deadlock dengan menganalisis kondisi aman sebelum alokasi resource.
+Deadlock Detection: Mengizinkan deadlock terjadi dan kemudian mendeteksinya untuk ditangani. 
+2. Mengapa deteksi deadlock tetap diperlukan dalam sistem operasi?
+Karena tidak semua sistem dapat menerapkan pencegahan atau penghindaran deadlock secara efisien, terutama pada sistem dengan resource dinamis.
+3. Apa kelebihan dan kekurangan pendekatan deteksi deadlock?
+Kelebihan:
+Lebih fleksibel dalam penggunaan resource.
+Tidak memerlukan analisis kondisi aman sebelum alokasi.
+
+Kekurangan:
+Deadlock tetap dapat terjadi.
+Membutuhkan mekanisme pemulihan setelah deadlock terdeteksi.
 
 ---
 
