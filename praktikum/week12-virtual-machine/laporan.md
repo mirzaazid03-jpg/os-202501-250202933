@@ -54,16 +54,16 @@ Storage: minimal 20 GB
 ---
 
 ## kode perintah
-# Mengecek user yang sedang aktif
+- Mengecek user yang sedang aktif
 whoami
 
-# Menampilkan informasi detail kernel dan arsitektur sistem
+- Menampilkan informasi detail kernel dan arsitektur sistem
 uname -a
 
-# Menampilkan daftar file di direktori saat ini
+- Menampilkan daftar file di direktori saat ini
 ls
 
-# Mengecek penggunaan Memori (RAM) 
+- Mengecek penggunaan Memori (RAM) 
 free -h
 
 

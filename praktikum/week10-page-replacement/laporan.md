@@ -5,9 +5,9 @@ Topik: ["Manajemen Memori – Page Replacement FIFO & LRU"]
 ---
 
 ## Identitas
-- **Nama**  : azid mirza maulana  
-- **NIM**   : 250202933 
-- **Kelas** : 1ikrb
+- **Nama**  : [azid mirza maulana]  
+- **NIM**   : [250202933]
+- **Kelas** : [1ikrb]
 
 ---
 
