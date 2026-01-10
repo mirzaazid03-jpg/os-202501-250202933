@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu [11]
-Topik: [" Simulasi dan Deteksi Deadlock"]
+Topik: ["deadlock detection"]
 
 ---
 
@@ -50,6 +50,77 @@ Circular Wait – Terdapat siklus proses yang saling menunggu resource.
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/example.png)
 ---
+
+import csv
+
+def read_dataset(filename):
+    processes = []
+    allocation = {}
+    request = {}
+
+    with open(filename, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            process = row['Process']
+            alloc = row['Allocation']
+            req = row['Request']
+
+            processes.append(process)
+            allocation[process] = alloc
+            request[process] = req
+
+    return processes, allocation, request
+
+
+def detect_deadlock(processes, allocation, request):
+    """
+    Deteksi deadlock menggunakan pendekatan graph sederhana (circular wait)
+    """
+    deadlocked = set()
+    visited = set()
+
+    def has_cycle(start, current):
+        if current in visited:
+            return False
+        visited.add(current)
+
+        for p in processes:
+            if allocation[p] == request[current]:
+                if p == start:
+                    return True
+                if has_cycle(start, p):
+                    deadlocked.add(p)
+                    return True
+        return False
+
+    for process in processes:
+        visited.clear()
+        if has_cycle(process, process):
+            deadlocked.add(process)
+
+    return deadlocked
+
+
+def main():
+    filename = "dataset_deadlock.csv"
+    processes, allocation, request = read_dataset(filename)
+
+    deadlocked_processes = detect_deadlock(processes, allocation, request)
+
+    print("=== HASIL DETEKSI DEADLOCK ===")
+    if deadlocked_processes:
+        print("Sistem mengalami DEADLOCK")
+        print("Proses yang terlibat:")
+        for p in sorted(deadlocked_processes):
+            print(f"- {p}")
+    else:
+        print("Sistem TIDAK mengalami deadlock")
+
+
+if __name__ == "__main__":
+    main()
+
+
 Hasil Deteksi Deadlock
 | Proses | Allocation | Request | Status   |
 | ------ | ---------- | ------- | -------- |
