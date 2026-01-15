@@ -7,7 +7,7 @@ Topik: [Docker – Resource Limit (CPU & Memori)]
 ## Identitas
 - **Nama**  : [azid mirza maulana]  
 - **NIM**   : [250202933]  
-- **Kelas** : [1ikrb]
+- **Kelas** : [1ikrb] 
 
 ---
 
@@ -193,6 +193,7 @@ docker stats
 ```
 
 ---
+
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
