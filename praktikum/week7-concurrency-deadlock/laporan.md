@@ -5,8 +5,9 @@ Topik: [Sinkronisasi Proses dan Masalah Deadlock]
 ---
 
 ## Identitas
-- **Nama**  : [azid mirza maulana]  
-- **NIM**   : [250202933]  
+- **Nama kelompok**  : [azid mirza maulana]  
+[aufa rifaah] 
+[rafid yuda permana]
 - **Kelas** : [1ikrb]
 
 ---
@@ -136,13 +137,13 @@ Simpan semua diagram, simulasi tangkapan layar, dan hasil diskusi di:
 praktikum/week7-concurrency-deadlock/screenshots/
 Tuliskan laporan kelompok di laporan.md(format IMRaD singkat: Pendahuluan, Metode, Hasil, Analisis, Diskusi ).
 
-```
+
 
 ---
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](./screenshots/Screenshot%202025-12-04%20184558.png)
 
 ---
 
