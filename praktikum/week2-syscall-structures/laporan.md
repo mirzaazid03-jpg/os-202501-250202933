@@ -1,6 +1,6 @@
 
-# Laporan Praktikum Minggu [X]
-Topik:  "fungsi sistem call dan sistem operasi
+# Laporan Praktikum Minggu [2]
+Topik:  "mekanisme system call dan struktur sistem operasi"
 
 ---
 
@@ -14,7 +14,11 @@ Topik:  "fungsi sistem call dan sistem operasi
 
 ## Tujuan
  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+> Menjelaskan konsep dan fungsi system call dalam sistem operasi.
+Mengidentifikasi jenis-jenis system call dan fungsinya.
+Mengamati alur perpindahan mode user ke kernel saat system call terjadi.
+Menggunakan perintah Linux untuk menampilkan dan menganalisis system call.
+
 
 ---
 
@@ -25,10 +29,36 @@ Cara melihat daftar system call yang aktif di sistem Linux.
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. 
+Gunakan Linux (Ubuntu/WSL).
+Pastikan perintah stracedan mansudah terinstal.
+Konfigurasikan Git (jika belum dilakukan pada minggu sebelumnya).
+Eksperimen 1 – Analisis System Call Jalankan perintah berikut:
+strace ls
+Catat 5–10 system call pertama yang muncul dan menjelaskan fungsinya.
+Simpan hasil analisis ke results/syscall_ls.txt.
+
+2. Eksperimen 2 – Menelusuri File System Call I/O Jalankan:
+
+strace -e trace=open,read,write,close cat /etc/passwd
+Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel.
+
+3. Eksperimen 3 – Mode Pengguna vs Kernel Jalankan:
+
+dmesg | tail -n 10
+Kernel log Amati yang muncul. Apa bedanya keluaran ini dengan keluaran dari program biasa?
+
+4. Diagram Alur System Call
+
+Buat diagram yang menggambarkan alur eksekusi system call dari program user hingga kernel dan kembali lagi ke mode user.
+Gunakan draw.io / mermaid.
+Simpan di:
+praktikum/week2-syscall-structure/screenshots/syscall-diagram.png
+Komit & Dorong
+
+git add .
+git commit -m "Minggu 2 - Struktur System Call dan Kernel Interaction"
+git push origin main
 
 ---
 

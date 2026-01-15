@@ -1,33 +1,40 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu [13]
+Topik: [Docker – Resource Limit (CPU & Memori)]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : [azid mirza maulana]  
+- **NIM**   : [250202933]  
+- **Kelas** : [1ikrb]
 
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+1 Menulis Dockerfile sederhana untuk sebuah aplikasi/skrip.
+2 Membangun image dan menjalankan container.
+3 Menjalankan container dengan pembatasan CPU dan memori.
+4 Mengamati dan menjelaskan perbedaan eksekusi container dengan dan tanpa limit resource.
+5 Menyusun laporan praktikum secara runtut dan sistematis.
 
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+1. Membuat Dockerfile sederhana untuk menjalankan aplikasi/skrip.
+2. Menjalankan container dengan pembatasan resource (CPU dan memori).
+3. Mengamati dampak pembatasan resource melalui output program dan monitoring sederhana.
 
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. Persiapan Lingkungan [Pastikan Docker terpasang dan berjalan & Verifikasi]
+2. Membuat Aplikasi/Skrip Uji
+3. Membuat Dockerfile 
+4. Menjalankan Container Tanpa Limit
+5. Menjalankan Container Dengan Limit Resource
+6. Monitoring Sederhana
+7. Commit & Push
 
 ---
 
@@ -60,12 +67,12 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. [Mengapa container perlu dibatasi CPU dan memori?]  
+   **Jawaban:Container dibatasi untuk mencegah satu container mengonsumsi semua sumber daya host, yang bisa menyebabkan crash sistem atau starvation container lain. Cgroups di Linux kernel menegakkan batas ini.**  
+2. [Apa perbedaan VM dan container dalam konteks isolasi resource?]  
+   **Jawaban:VM isolasi penuh dengan hypervisor (guest OS terpisah, overhead tinggi), sementara container gunakan namespaces dan cgroups untuk isolasi proses ringan pada kernel host yang sama (efisien tapi kurang kuat secara hardware).**  
+3. [Apa dampak limit memori terhadap aplikasi boros memori?]  
+   **Jawaban:Aplikasi gagal alokasi (MemoryError/OOM kill), proses dihentikan kernel sebelum host kehabisan memori; tanpa limit, bisa crash seluruh host.**  
 
 ---
 

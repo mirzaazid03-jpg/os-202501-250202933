@@ -54,23 +54,14 @@ Buat tabel perbandingan efek kuantum .
 
 ---
 
-## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
-```bash
-uname -a
-lsmod | head
-dmesg | head
-```
-
----
 
 ## Hasil Eksekusi
 ![screenshot hasil](./screenshots/Screenshot%202025-11-13%20161623.png)
 experimen 1 perhitungan round robin(RR)
-
+```
 | P1 | P2 | P3 | P4 | P1 | P3 | ...
 0    3    6    9   12   15   18  ...
-
+```
 
 ![screenshot hasil](./screenshots/Screenshot%202025-11-13%20162006.png)
 Eksperimen 2 penjadwalan prioritas
@@ -83,7 +74,12 @@ TAT[i] = WT[i] + Burst[i]
 ---
 
 ## Analisis
-- 
+- RR adil tapi tergantung quantum Round Robin memberikan waktu CPU bergantian ke semua proses. Jika quantum terlalu kecil, sering ganti proses jadi lambat. Kalau terlalu besar, mirip antrian biasa.
+Priority lebih cepat proses penting Proses dengan prioritas tinggi jalan dulu, bikin proses penting cepat selesai. Tapi proses prioritas rendah bisa kelamaan nunggu (starvation).
+Quantum pengaruh besar di RR Quantum kecil bikin proses sering berhenti-berhenti, jadi lama. Quantum besar bikin proses cepat selesai tapi bisa kurang responsif.
+Priority lebih efisien, RR lebih adil Priority lebih cepat secara rata-rata, cocok buat tugas penting. RR lebih cocok buat sistem yang butuh keadilan semua proses.
+Kesimpulan: pilih sesuai kebutuhan Pakai RR kalau ingin semua proses dapat giliran. Pakai Priority kalau ada proses yang harus didahulukan, tapi perlu cara supaya proses kecil tidak kelamaan menunggu.
+
 
 ---
 

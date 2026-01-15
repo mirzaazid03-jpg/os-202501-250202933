@@ -54,17 +54,6 @@ Storage: minimal 20 GB
 ---
 
 ## kode perintah
-- Mengecek user yang sedang aktif
-whoami
-
-- Menampilkan informasi detail kernel dan arsitektur sistem
-uname -a
-
-- Menampilkan daftar file di direktori saat ini
-ls
-
-- Mengecek penggunaan Memori (RAM) 
-free -h
 
 
 
@@ -72,7 +61,7 @@ free -h
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil]()
+![Screenshot hasil](./screenshots/)
 
 Hasil Instalasi VM
 
