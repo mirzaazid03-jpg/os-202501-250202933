@@ -7,16 +7,14 @@ Topik: [Docker – Resource Limit (CPU & Memori)]
 ## Identitas
 - **Nama**  : [azid mirza maulana]  
 - **NIM**   : [250202933]  
-<<<<<<< HEAD
 - **Kelas** : [1ikrb]
 =======
 - **Kelas** : [1ikrb] 
->>>>>>> 36d0601d44f3c600a0383112566d828c9c14f4bd
+
 
 ---
 
 ## Tujuan
-<<<<<<< HEAD
 1 Menulis Dockerfile sederhana untuk sebuah aplikasi/skrip.
 2 Membangun image dan menjalankan container.
 3 Menjalankan container dengan pembatasan CPU dan memori.
@@ -28,12 +26,11 @@ Topik: [Docker – Resource Limit (CPU & Memori)]
 3. Menjalankan container dengan pembatasan CPU dan memori.
 4. Mengamati dan menjelaskan perbedaan eksekusi container dengan dan tanpa limit resource.
 5. Menyusun laporan praktikum secara runtut dan sistematis.
->>>>>>> 36d0601d44f3c600a0383112566d828c9c14f4bd
+
 
 ---
 
 ## Dasar Teori
-<<<<<<< HEAD
 1. Membuat Dockerfile sederhana untuk menjalankan aplikasi/skrip.
 2. Menjalankan container dengan pembatasan resource (CPU dan memori).
 3. Mengamati dampak pembatasan resource melalui output program dan monitoring sederhana.
