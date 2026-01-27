@@ -1,20 +1,23 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu [15]
+Topik: [Proyek Kelompok – Mini Simulasi Sistem Operasi (Scheduling + Memory + Container)]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : rafid raihan yuda permana (250202962)
+            : aufa rifaah (250202932)
+            : azid mirza maulana (250202933)
+- **Kelas** : [1ikrb]
 
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+1. Bekerja kolaboratif dalam tim dengan pembagian peran yang jelas.
+2. Mengintegrasikan beberapa konsep sistem operasi dalam satu aplikasi sederhana.
+3. Mengelola proyek menggunakan Git (branch/PR/commit yang rapi).
+4. Menyusun dokumentasi dan laporan proyek yang sistematis.
+5. Melakukan presentasi dan demo hasil proyek.
 
 ---
 
